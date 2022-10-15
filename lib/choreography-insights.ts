@@ -13,17 +13,17 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // SPDX-License-Identifier: MIT-0
-import * as cdk from "@aws-cdk/core";
-import { AttributeType, BillingMode, Table, TableEncryption } from "@aws-cdk/aws-dynamodb";
-import { StateMachine, StateMachineType, TaskStateBase, IChainable, State } from "@aws-cdk/aws-stepfunctions";
-import { RetentionDays } from "@aws-cdk/aws-logs";
-import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
-import { IFunction, Tracing } from '@aws-cdk/aws-lambda';
-import { EventPattern, EventBus, Rule, RuleTargetInput, EventField } from '@aws-cdk/aws-events';
-import { ManagedPolicy, Policy, Role, PolicyStatement, ServicePrincipal, PolicyDocument } from '@aws-cdk/aws-iam';
-import { LambdaFunction } from "@aws-cdk/aws-events-targets";
+import * as cdk from "constructs";
+import { AttributeType, BillingMode, Table, TableEncryption } from "aws-cdk-lib/aws-dynamodb";
+import { StateMachine, StateMachineType, TaskStateBase, IChainable, State } from "aws-cdk-lib/aws-stepfunctions";
+import { RetentionDays } from "aws-cdk-lib/aws-logs";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
+import { IFunction, Tracing } from 'aws-cdk-lib/aws-lambda';
+import { EventPattern, EventBus, Rule, RuleTargetInput, EventField } from 'aws-cdk-lib/aws-events';
+import { ManagedPolicy, Policy, Role, PolicyStatement, ServicePrincipal, PolicyDocument } from 'aws-cdk-lib/aws-iam';
+import { LambdaFunction } from "aws-cdk-lib/aws-events-targets";
 import { ChoreographyState, ChoreographyStateBuilder } from "./choreography-state";
-import { Duration, Stack } from "@aws-cdk/core";
+import { Duration, Stack } from "aws-cdk-lib";
 
 export interface ChoreographyInsightsProps {
   eventBus: EventBus,
@@ -90,7 +90,7 @@ export class ChoreographyInsights extends cdk.Construct {
       // The default removal policy is RETAIN, which means that cdk destroy will not attempt to delete
       // the new table, and it will remain in your account until manually deleted. By setting the policy to 
       // DESTROY, cdk destroy will delete the table (even if it has data in it)
-      removalPolicy: cdk.RemovalPolicy.DESTROY, // NOT recommended for production code,
+      // removalPolicy: cdk.RemovalPolicy.DESTROY, // NOT recommended for production code,
       billingMode: BillingMode.PAY_PER_REQUEST,
       pointInTimeRecovery: true
     });

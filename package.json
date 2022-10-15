@@ -11,28 +11,22 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.161.0",
     "@types/jest": "^28.1.3",
     "@types/node": "10.17.60",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "esbuild": "^0.14.47",
-    "aws-cdk": "1.161.0",
     "jest": "^28.1.1",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.1",
     "typescript": "~4.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-dynamodb": "^1.161.0",
-    "@aws-cdk/aws-events-targets": "^1.161.0",
-    "@aws-cdk/aws-lambda": "^1.161.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.161.0",
-    "@aws-cdk/aws-stepfunctions": "^1.161.0",
-    "@aws-cdk/aws-stepfunctions-tasks": "^1.161.0",
-    "@aws-cdk/core": "1.161.0",
-    "source-map-support": "^0.5.16",
     "@aws-sdk/client-dynamodb": "^3.113.0",
-    "@aws-sdk/client-sfn": "^3.112.0"
+    "@aws-sdk/client-sfn": "^3.112.0",
+    "aws-cdk": "^2.46.0",
+    "aws-cdk-lib": "^2.46.0",
+    "constructs": "^10.1.131",
+    "source-map-support": "^0.5.16"
   }
 }

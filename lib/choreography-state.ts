@@ -13,10 +13,10 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // SPDX-License-Identifier: MIT-0
-import * as cdk from "@aws-cdk/core";
-import { Table } from "@aws-cdk/aws-dynamodb";
-import { CallAwsService } from "@aws-cdk/aws-stepfunctions-tasks";
-import { JsonPath } from "@aws-cdk/aws-stepfunctions";
+import * as cdk from "constructs";
+import { Table } from "aws-cdk-lib/aws-dynamodb";
+import { CallAwsService } from "aws-cdk-lib/aws-stepfunctions-tasks";
+import { JsonPath } from "aws-cdk-lib/aws-stepfunctions";
 
 /**
  * Properties to initialize a ChoreographyStateBuilder

@@ -13,10 +13,10 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // SPDX-License-Identifier: MIT-0
-import * as cdk from "@aws-cdk/core"
-import { StateMachine, Map, JsonPath, TaskInput, Wait, WaitTime } from "@aws-cdk/aws-stepfunctions";
-import { EventBus } from "@aws-cdk/aws-events";
-import { EventBridgePutEvents } from "@aws-cdk/aws-stepfunctions-tasks";
+import * as cdk from "constructs"
+import { StateMachine, Map, JsonPath, TaskInput, Wait, WaitTime } from "aws-cdk-lib/aws-stepfunctions";
+import { EventBus } from "aws-cdk-lib/aws-events";
+import { EventBridgePutEvents } from "aws-cdk-lib/aws-stepfunctions-tasks";
 
 /**
  * Properties to initialize a workflow simulation state machine
